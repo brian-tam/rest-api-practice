@@ -13,9 +13,13 @@
     <ul>
         <% for(let comment of comments){ %>
             <li>
-                <%=comment.username%> - <%=comment.comment%>
+                <%=comment.username%> -
+                    <%=comment.comment%>
+                        <a href="/comments/<%= comment.id %>">Details</a>
             </li>
             <% } %>
+                <br>
+                <a href="/comments/new">New comment</a>
     </ul>
 </body>
 
